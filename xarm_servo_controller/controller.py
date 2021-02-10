@@ -179,7 +179,7 @@ class Controller:
 
             if data[0] == self.SIGNATURE and data[1] == self.SIGNATURE and data[3] == cmd:
                 length = data[2]
-                data = self._device.read(length)
+                data = self._device.read(4)
 
                 if self.debug:
                     print(' '.join('{:02x}'.format(x) for x in data))
